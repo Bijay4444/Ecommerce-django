@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ecommerce',
+        'NAME': 'ecommerce-store',
         # Replace 'root' with your MySQL username in XAMPP (usually 'root' by default).
         'USER': 'root',
         # If you set a password for the MySQL root user in XAMPP, enter it here.
