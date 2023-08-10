@@ -18,8 +18,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('category', views.category_list, name='category'),
+    path('category', views.CategoryList.as_view(), name='category'),
+    path('category/<pk>', views.CategoryDetail.as_view(), name='category_detail'),
     path('product', views.product_list, name='product'),
-    path('product/<id>', views.product_detail, name='product_detail'),
-    path('category/<id>', views.category_detail, name='category_detail'),
+    path('product/<pk>', views.product_detail, name='product_detail'),
 ]

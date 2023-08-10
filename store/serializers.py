@@ -3,9 +3,11 @@ from . import models
 from decimal import Decimal
 
 
-class CategorySerializer(serializers.Serializer):
-    title = serializers.CharField(max_length=255)
-
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Category
+        fields = ['id', 'title']
+    
 
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
