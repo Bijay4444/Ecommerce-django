@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'debug_toolbar',
     'django_filters',
+    'authentication',
 ]
 
 MIDDLEWARE = [
@@ -158,3 +159,5 @@ REST_FRAMEWORK = {
     ),
     'PAGE_SIZE':10
 }
+
+AUTH_USER_MODEL = 'authentication.User'
