@@ -20,7 +20,6 @@ class CategoryViewset(ModelViewSet):
    queryset=Category.objects.all()
    serializer_class = serializers.CateogrySerializer
 
-
     
 class ProductViewset(ModelViewSet):
     queryset=Product.objects.select_related('category').all()

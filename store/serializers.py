@@ -3,7 +3,6 @@ from decimal import Decimal
 from rest_framework import serializers
 from . import models
 
-
 class CateogrySerializer(serializers.ModelSerializer):
     product_count=serializers.IntegerField(read_only=True)
     class Meta:
