@@ -158,7 +158,11 @@ REST_FRAMEWORK = {
         'django_filters.rest_framework.DjangoFilterBackend',
     
     ),
-    'PAGE_SIZE':10
+    'DEFAULT_AUTHENTICATION_CLASSES':[
+         "rest_framework.authentication.TokenAuthentication"
+    ],
+    'PAGE_SIZE': 10,
+        
 }
 
 AUTH_USER_MODEL = 'authentication.User'
