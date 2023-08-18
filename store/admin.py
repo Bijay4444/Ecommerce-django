@@ -30,4 +30,14 @@ class ProductAdmin(admin.ModelAdmin):
         else:
             return 'Low on Stock'
 
-admin.site.register(Order)
+# @admin.register(Order)
+# class OrderAdmin(admin.ModelAdmin):
+#     inlines=[OrerItemInline]
+
+
+class CartItemInline(admin.TabularInline):
+    model=CartItem
+
+@admin.register(Cart)
+class CartAdmin(admin.ModelAdmin):
+    inlines=[CartItemInline]

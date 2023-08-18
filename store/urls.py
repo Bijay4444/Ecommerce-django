@@ -22,4 +22,5 @@ urlpatterns = [
     path('category/<pk>', views.CategoryViewset.as_view({'get': 'retrive', 'put': 'update', 'delete': 'delete'}), name='category_detail'),
     path('product', views.ProductViewset.as_view({'get': 'list', 'post': 'create'}), name='product'),
     path('product/<pk>', views.ProductViewset.as_view({'get': 'retrive', 'put': 'update', 'delete': 'delete'}), name='product_detail'),
+    path('cart',views.CartViewset.as_view())
 ]
