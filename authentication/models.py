@@ -4,4 +4,8 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    phone_number = models.CharField(max_length=20, blank=True, null=True)
+    phone_number=models.CharField(null=True,blank=True,max_length=10)
+
+    def __str__(self) -> str:
+        return f"{self.first_name}({self.username})"
+
